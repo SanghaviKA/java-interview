@@ -1,17 +1,37 @@
 package deduplication;
 
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 
-class App {
+public class App {
+    public static void main(String[] args) {
+        HashSet<Book> bucket = new HashSet<Book>();
+        bucket.add(new Book("1000", "Outliers", "Malcom Gladwell"));
+        bucket.add(new Book("1000", "Outliers", "Malcom Gladwell"));
+        bucket.add(new Book("1001", "John Grisham", "Time to Kill"));
+        bucket.add(new Book("1000", "Outliers", "Malcom Gladwell"));
 
-  public static void main(String[] args) {
-    String message = Stream
-      .of("Hello", "World", "!")
-      .map(String::toUpperCase)
-      .collect(Collectors.joining(" "));
+        Iterator<Book> iterator = bucket.iterator();
 
-    System.out.println(message);
-  }
+        while (iterator.hasNext()) { // has items are available or not? if (available)
+            Book b = iterator.next(); // take the first element
+            System.out.println("Book Id: " + b.bookId + " Author: " + b.author + "Book Name: " + b.bookName);
+
+        }
+
+
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
