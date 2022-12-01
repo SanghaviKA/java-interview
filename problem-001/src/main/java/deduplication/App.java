@@ -14,8 +14,8 @@ public class App {
 
         Iterator<Book> iterator = bucket.iterator();
 
-        while (iterator.hasNext()) { // has items are available or not? if (available)
-            Book b = iterator.next(); // take the first element
+        while (iterator.hasNext()) { 
+            Book b = iterator.next();
             System.out.println("Book Id: " + b.bookId + " Author: " + b.author + "Book Name: " + b.bookName);
 
         }
