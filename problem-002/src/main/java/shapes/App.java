@@ -7,13 +7,13 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Square s = new Square(5.0);
-        Rectangle r = new Rectangle(5.0, 4.0);
-        Circle c = new Circle(5.0);
+        Square square = new Square(5.0);
+        Rectangle rectangle = new Rectangle(5.0, 4.0);
+        Circle circle = new Circle(5.0);
 
-        computeProperties(s);
-        computeProperties(r);
-        computeProperties(c);
+        computeProperties(square);
+        computeProperties(rectangle);
+        computeProperties(circle);
 
     }
 }

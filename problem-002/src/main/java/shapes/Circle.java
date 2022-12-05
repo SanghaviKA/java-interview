@@ -1,7 +1,7 @@
 package shapes;
 
-public class Circle implements Shapes {
-    double radius;
+public class Circle extends Shapes {
+    private double radius;
     static final double PI = Math.PI;
 
     Circle(double radius) {
@@ -21,6 +21,14 @@ public class Circle implements Shapes {
         perimeter = 2 * PI * this.radius;
         System.out.println("perimeter of Circle:" + perimeter);
         return perimeter;
+    }
+
+    public double getRadius() {
+        return this.radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
 }

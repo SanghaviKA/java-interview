@@ -1,33 +1,45 @@
 package shapes;
 
-public class Rectangle implements Shapes {
-    double length;
-    double bredth;
+public class Rectangle extends Shapes {
+    private double length;
+    private double breadth;
 
-    Rectangle(double length, double bredth) {
+    Rectangle(double length, double breadth) {
 
         this.length = length;
-        this.bredth = bredth;
+        this.breadth = breadth;
     }
 
     public double area() {
         double area;
-        if(this.length <= -1 && this.bredth <= -1){
+        if (this.length <= -1 || this.breadth <= -1) {
+            System.out.println("Computing with the negative value");
             return 0;
-        }else{
-            area = this.length * this.bredth;
+        } else {
+            area = this.length * this.breadth;
             System.out.println("Area of Rect:" + area);
             return area;
         }
 
     }
+
     public double perimeter() {
         double perimeter;
-        perimeter = 2 * (this.length + this.bredth);
-        System.out.println("perimeter of Rect:" + perimeter);
-       return perimeter;
+        if (this.length <= -1 || this.breadth <= -1) {
+            return 0;
+        } else {
+            perimeter = 2 * (this.length + this.breadth);
+            System.out.println("perimeter of Rect:" + perimeter);
+            return perimeter;
+        }
+    }
 
+    public double getLength() {
+        return this.length;
+    }
 
+    public void setLength(double length) {
+         this.length = length;
     }
 
 }

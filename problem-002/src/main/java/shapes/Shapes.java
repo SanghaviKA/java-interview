@@ -1,9 +1,15 @@
 package shapes;
 
-public interface Shapes {
+public class Shapes {
 
-    double area();
+    double area() {
+        System.out.println("Area computation");
+        return 0;
+    }
 
-    double perimeter();
+    double perimeter() {
+        System.out.println("perimeter computation");
+        return 0;
+    }
 
 }
