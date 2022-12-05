@@ -2,12 +2,12 @@ package shapes;
 
 public class Shapes {
 
-    double area() {
+    public double area() {
         System.out.println("Area computation");
         return 0;
     }
 
-    double perimeter() {
+    public double perimeter() {
         System.out.println("perimeter computation");
         return 0;
     }

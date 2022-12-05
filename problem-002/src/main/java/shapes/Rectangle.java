@@ -4,7 +4,7 @@ public class Rectangle extends Shapes {
     private double length;
     private double breadth;
 
-    Rectangle(double length, double breadth) {
+    public Rectangle(double length, double breadth) {
 
         this.length = length;
         this.breadth = breadth;

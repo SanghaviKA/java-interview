@@ -4,7 +4,7 @@ package shapes;
 public class Square extends Shapes {
     private double side;
 
-    Square(double side) {
+    public Square(double side) {
 
         this.side = side;
     }
